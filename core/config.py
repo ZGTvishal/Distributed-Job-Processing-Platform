@@ -10,7 +10,8 @@ class Settings(BaseSettings):
     ENV: str = Field(default="development")
 
     # Database
-    DATABASE_URL: str = Field(...)
+    #DATABASE_URL: str = Field(...)
+    DATABASE_URL: str = "sqlite:///jobs.db"
 
     # Redis
     REDIS_HOST: str = "redis"
