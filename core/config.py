@@ -1,38 +1,26 @@
-# core/config.py
-
 from pydantic import Field
-from pydantic_settings import BaseSettings
-from functools import lru_cache
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    APP_NAME: str = "Distributed Job Processing Platform"
-    ENV: str = Field(default="development")
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    # Database
-    #DATABASE_URL: str = Field(...)
-    DATABASE_URL: str = "sqlite:///jobs.db"
+    app_name: str = Field(alias="APP_NAME")
+    env: str = Field(alias="ENV")
 
-    # Redis
-    REDIS_HOST: str = "redis"
-    REDIS_PORT: int = 6379
-    REDIS_DB: int = 0
+    database_url: str = Field(alias="DATABASE_URL")
 
-    # Worker
-    WORKER_TIMEOUT_SECONDS: int = 60
-    MAX_RETRIES: int = 3
+    redis_host: str = Field(alias="REDIS_HOST")
+    redis_port: int = Field(alias="REDIS_PORT")
+    redis_db: int = Field(alias="REDIS_DB")
 
-    # Logging
-    LOG_LEVEL: str = "INFO"
+    worker_timeout_seconds: int = Field(alias="WORKER_TIMEOUT_SECONDS")
+    max_retries: int = Field(alias="MAX_RETRIES")
 
-    model_config = {
-        "env_file": ".env",
-        "case_sensitive": True,
-    }
+    log_level: str = Field(alias="LOG_LEVEL")
 
 
-@lru_cache()
-def get_settings() -> Settings:
+def get_settings():
     return Settings()
 
 
