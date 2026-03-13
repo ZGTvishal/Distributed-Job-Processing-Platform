@@ -8,7 +8,7 @@ from core.config import settings
 def configure_logging():
     logging.basicConfig(
         format="%(message)s",
-        level=settings.LOG_LEVEL,
+        level=settings.log_level,
     )
 
     structlog.configure(
