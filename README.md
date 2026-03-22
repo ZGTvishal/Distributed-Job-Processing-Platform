@@ -4,7 +4,7 @@ A production-oriented distributed job processing system built with Python, desig
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This project implements a scalable architecture for processing asynchronous jobs using:
 
@@ -22,7 +22,7 @@ It demonstrates backend engineering concepts such as:
 
 ---
 
-## 🧠 Architecture
+## Architecture
 
 ```
 Client / Producer
@@ -46,7 +46,7 @@ Worker Processes (Execution Engine)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * Backend: Python
 * ORM: SQLAlchemy
@@ -57,7 +57,7 @@ Worker Processes (Execution Engine)
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 project-root/
@@ -74,7 +74,7 @@ project-root/
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the repository
 
@@ -148,7 +148,7 @@ alembic upgrade head
 
 ---
 
-## 🧪 Testing the System
+## Testing the System
 
 ### Create and enqueue a job
 
@@ -176,7 +176,7 @@ LRANGE job_queue 0 -1
 
 ---
 
-## 🧩 Job Model
+## Job Model
 
 | Field       | Description              |
 | ----------- | ------------------------ |
@@ -193,7 +193,7 @@ LRANGE job_queue 0 -1
 
 ---
 
-## 🔄 Current Workflow
+## Current Workflow
 
 1. Job is created via service
 2. Stored in PostgreSQL
@@ -202,7 +202,7 @@ LRANGE job_queue 0 -1
 
 ---
 
-## 🧱 Upcoming Features
+## Upcoming Features
 
 * Worker execution engine
 * Retry mechanism with backoff
@@ -214,7 +214,7 @@ LRANGE job_queue 0 -1
 
 ---
 
-## 📈 Why This Project Matters
+## Why This Project Matters
 
 This project demonstrates:
 
@@ -231,7 +231,7 @@ It is intentionally designed to reflect patterns used in systems like:
 
 ---
 
-## 🧑‍💻 Author
+## Author
 
 Vishal Patel
 MSc Computer Science, University of Liverpool
@@ -239,6 +239,6 @@ Software Engineer (Backend & Full-stack)
 
 ---
 
-## 📄 License
+## License
 
 MIT License
